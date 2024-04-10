@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { QueryClient ,QueryClientProvider} from 'react-query';
-import "./FontAwesome"
 import { RecoilRoot } from 'recoil';
 const queryClient = new QueryClient();
 

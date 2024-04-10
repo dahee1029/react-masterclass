@@ -1,12 +1,7 @@
-import { createGlobalStyle } from "styled-components";
-import Router from "./Router";
-import {ReactQueryDevtools} from "react-query/devtools"
-import {HelmetProvider} from "react-helmet-async"
-import { ThemeProvider } from "styled-components";
-import { darktheme,lighttheme} from './theme';
-import { useRecoilValue } from "recoil";
-import { isDarkAtom } from "./atoms";
-const GlobalStyle=createGlobalStyle`
+import { createGlobalStyle } from 'styled-components';
+import ToDoList from './routes/ToDoList';
+
+const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -33,7 +28,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, main, menu, nav, section {
   display: block;
 }
-/* HTML5 hidden-attribute fix for newer browsers */
+
 *[hidden] {
     display: none;
 }
@@ -60,29 +55,22 @@ table {
 }
 body{
   font-family: "Nanum Gothic Coding", monospace;
-  background-color: ${props=>props.theme.bgColor};
-  color: ${props=>props.theme.textColor};
-  accent-color: ${props=>props.theme.accentColor};
 }
-a{
-  text-decoration: none;
-  color:inherit;
-}
-`
+`;
 
 function App() {
-  const isDark= useRecoilValue(isDarkAtom);
+  // const isDark= useRecoilValue(isDarkAtom);
   return (
     <>
-      <ThemeProvider theme={isDark? darktheme: lighttheme}>
-        <GlobalStyle/>
-          <HelmetProvider>
+      {/* <ThemeProvider theme={isDark? darktheme: lighttheme}> */}
+      <GlobalStyle />
+      <ToDoList />
+      {/* <HelmetProvider>
             <Router />
           </HelmetProvider>
         <ReactQueryDevtools initialIsOpen={true}/>
-      </ThemeProvider>
+      </ThemeProvider> */}
     </>
-  
   );
 }
 
