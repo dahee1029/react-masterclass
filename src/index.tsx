@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+<<<<<<< HEAD
 import { QueryClient, QueryClientProvider } from 'react-query';
+=======
+import { QueryClient ,QueryClientProvider} from 'react-query';
+>>>>>>> 5e13ea0f6b441cff3cda78abf4fa620c91f17567
 import { RecoilRoot } from 'recoil';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme } from './theme';

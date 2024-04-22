@@ -1,7 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
+<<<<<<< HEAD
 // import TodoList from './routes/todo/ToDoList';
 
 import Part4 from './routes/part4/part4';
+=======
+import ToDoList from './routes/ToDoList';
+
+>>>>>>> 5e13ea0f6b441cff3cda78abf4fa620c91f17567
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 html, body, div, span, applet, object, iframe,
@@ -57,9 +62,12 @@ table {
 body{
   font-weight: 300;
   font-family: "Nanum Gothic Coding", monospace;
+<<<<<<< HEAD
   color:black;
   line-height: 1.2;
   background: linear-gradient(135deg,#ffeaa7,#81ecec);
+=======
+>>>>>>> 5e13ea0f6b441cff3cda78abf4fa620c91f17567
 }
 `;
 
@@ -69,8 +77,12 @@ function App() {
     <>
       {/* <ThemeProvider theme={isDark? darktheme: lighttheme}> */}
       <GlobalStyle />
+<<<<<<< HEAD
       <Part4 />
       {/* <TodoList /> */}
+=======
+      <ToDoList />
+>>>>>>> 5e13ea0f6b441cff3cda78abf4fa620c91f17567
       {/* <HelmetProvider>
             <Router />
           </HelmetProvider>
